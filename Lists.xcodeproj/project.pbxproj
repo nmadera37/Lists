@@ -14,6 +14,8 @@
 		6F85283A23C3DB86007CC8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F85283823C3DB86007CC8B9 /* LaunchScreen.storyboard */; };
 		6F85284523C3DB86007CC8B9 /* ListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85284423C3DB86007CC8B9 /* ListsTests.swift */; };
 		6F85285023C3DBDA007CC8B9 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85284F23C3DBDA007CC8B9 /* ListViewModel.swift */; };
+		6F85285223C3E33D007CC8B9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85285123C3E33D007CC8B9 /* ItemCell.swift */; };
+		6F85285423C3E5BE007CC8B9 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85285323C3E5BE007CC8B9 /* UIColor+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		6F85284423C3DB86007CC8B9 /* ListsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsTests.swift; sourceTree = "<group>"; };
 		6F85284623C3DB86007CC8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F85284F23C3DBDA007CC8B9 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		6F85285123C3E33D007CC8B9 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		6F85285323C3E5BE007CC8B9 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				6F85282F23C3DB85007CC8B9 /* SceneDelegate.swift */,
 				6F85284F23C3DBDA007CC8B9 /* ListViewModel.swift */,
 				6F85283123C3DB85007CC8B9 /* ViewController.swift */,
+				6F85285123C3E33D007CC8B9 /* ItemCell.swift */,
+				6F85285323C3E5BE007CC8B9 /* UIColor+App.swift */,
 				6F85283623C3DB86007CC8B9 /* Assets.xcassets */,
 				6F85283823C3DB86007CC8B9 /* LaunchScreen.storyboard */,
 				6F85283B23C3DB86007CC8B9 /* Info.plist */,
@@ -203,6 +209,8 @@
 				6F85282E23C3DB85007CC8B9 /* AppDelegate.swift in Sources */,
 				6F85285023C3DBDA007CC8B9 /* ListViewModel.swift in Sources */,
 				6F85283023C3DB85007CC8B9 /* SceneDelegate.swift in Sources */,
+				6F85285223C3E33D007CC8B9 /* ItemCell.swift in Sources */,
+				6F85285423C3E5BE007CC8B9 /* UIColor+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

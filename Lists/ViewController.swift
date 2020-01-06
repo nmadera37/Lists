@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     
     // MARK: Constants
     private enum Constants {
-        static let cellIdentifier = "cell"
+        static let cellIdentifier = "listCell"
+        static let contentInset = UIEdgeInsets(top: 0.0, left: 25.0, bottom: 0.0, right: 50.0)
+        static let separatorInset = UIEdgeInsets(top: 0.0, left: 40.0, bottom: 0.0, right: 0.0)
     }
     
     
@@ -47,9 +49,11 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as? ItemCell else {
+            fatalError("Unable to initialize cell.")
+        }
         
-        cell.textLabel?.text = viewModel.titleForItem(at: indexPath)
+        cell.configure(with: viewModel.titleForItem(at: indexPath))
         
         return cell
     }
@@ -69,7 +73,10 @@ private extension ViewController {
     
     func setupTableView() {
         let aTableView = UITableView()
-        aTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
+        aTableView.register(ItemCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
+        aTableView.contentInset = Constants.contentInset
+        aTableView.separatorInset = Constants.separatorInset
+        aTableView.allowsMultipleSelection = true
         aTableView.dataSource = self
         
         tableView = aTableView
