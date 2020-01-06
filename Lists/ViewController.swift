@@ -41,6 +41,13 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Actions
+extension ViewController {
+    @objc func tappedAdd() {
+        print("Tapped add")
+    }
+}
+
 // MARK: UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,6 +60,12 @@ extension ViewController: UITableViewDataSource {
         }
         
         cell.configure(with: viewModel.titleForItem(at: indexPath))
+        cell.textChanged = { _ in
+            DispatchQueue.main.async {
+                tableView.beginUpdates()
+                tableView.endUpdates()
+            }
+        }
         
         return cell
     }
@@ -64,15 +77,24 @@ private extension ViewController {
         title = "List"
         
         // Add Views
+        setupAddItemButton()
         setupTableView()
         
         // Constraints
         addConstraintsForTableView()
     }
     
+    func setupAddItemButton() {
+        let aButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tappedAdd))
+        
+        navigationItem.rightBarButtonItem = aButton
+    }
+    
     func setupTableView() {
         let aTableView = UITableView()
         aTableView.register(ItemCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
+        aTableView.rowHeight = UITableView.automaticDimension
+        aTableView.estimatedRowHeight = 40.0
         aTableView.separatorInset = Constants.separatorInset
         aTableView.allowsMultipleSelection = true
         aTableView.dataSource = self
