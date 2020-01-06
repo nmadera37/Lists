@@ -89,7 +89,7 @@ private extension ItemCell {
         checkView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            checkView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
+            checkView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0),
             checkView.centerYAnchor.constraint(equalTo: centerYAnchor),
             checkView.heightAnchor.constraint(equalToConstant: Constants.checkViewHeight),
             checkView.widthAnchor.constraint(equalToConstant: Constants.checkViewHeight)

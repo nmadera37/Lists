@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     // MARK: Constants
     private enum Constants {
         static let cellIdentifier = "listCell"
-        static let contentInset = UIEdgeInsets(top: 0.0, left: 25.0, bottom: 0.0, right: 50.0)
-        static let separatorInset = UIEdgeInsets(top: 0.0, left: 40.0, bottom: 0.0, right: 0.0)
+        static let separatorInset = UIEdgeInsets(top: 0.0, left: 60.0, bottom: 0.0, right: 0.0)
     }
     
     
@@ -74,7 +73,6 @@ private extension ViewController {
     func setupTableView() {
         let aTableView = UITableView()
         aTableView.register(ItemCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
-        aTableView.contentInset = Constants.contentInset
         aTableView.separatorInset = Constants.separatorInset
         aTableView.allowsMultipleSelection = true
         aTableView.dataSource = self
